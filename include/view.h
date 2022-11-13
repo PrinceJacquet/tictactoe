@@ -1,6 +1,7 @@
 #ifndef VIEW_H
 #define VIEW_H
 
+#include "../include/model.h"
       
 typedef enum RENDER_OPTION
 {

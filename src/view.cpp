@@ -1,5 +1,5 @@
-#include "view.h"
-#include "Controller.h"         
+#include "../include/view.h"
+#include "../include/Controller.h"         
 
 #include <iostream>    
 #include <string>  

@@ -1,8 +1,8 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
-#include "model.h"
-#include "view.h"
+#include "../include/model.h"
+#include "../include/view.h"
  
 #define MAX_INPUT_LINE_SIZE 100
 #define VALID_INPUT_SIZE 5

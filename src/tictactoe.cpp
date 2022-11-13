@@ -1,9 +1,9 @@
 #include <windows.h>
 #include <iostream>
 
-#include "model.h"
-#include "view.h"
-#include "controller.h"
+#include "../include/model.h"
+#include "../include/view.h"
+#include "../include/controller.h"
 
 using namespace std;
 

@@ -3,14 +3,15 @@
 # Make Macros, Macro Expansions,
 # Rules, Targets, Dependencies, Commands, Goals
 # Artificial Targets, Pattern Rule, Dependency Rule.
+.PHONY: all clean
 
 # Comments start with a # and go to the end of the line.
 
 # Here is a simple Make Macro.
-LINK_TARGET = tictactoe.exe
+LINK_TARGET = ./bin/tictactoe.exe
 
 # Here is a Make Macro that uses the backslash to extend to multiple lines.
-OBJS = model.o view.o controller.o tictactoe.o
+OBJS = ./obj/model.o ./obj/view.o ./obj/controller.o ./obj/tictactoe.o
 
 # Here is a Make Macro that uses the backslash to extend to multiple lines.
 FLAGS = -Wall -lm
@@ -56,7 +57,7 @@ $(LINK_TARGET) : $(OBJS)
 # The rule's command uses some built-in Make Macros:
 # $@ for the pattern-matched target
 # $< for the pattern-matched dependency
-%.o : %.cpp
+./obj/%.o : ./src/%.cpp
 	g++ -g -Wall -lm -o $@ -c $<
 
 # These are Dependency Rules, which are rules without any command.
@@ -72,6 +73,6 @@ $(LINK_TARGET) : $(OBJS)
 
 # Alternatively to manually capturing dependencies, several automated
 # dependency generators exist.  Here is one possibility (commented out)...
-%.dep : %.cpp
+./obj/%.dep : ./src/%.cpp
 	g++ -M $(FLAGS) $< > $@
-include $(OBJS:.o=.dep)
+include $(OBJS:.o = .dep)

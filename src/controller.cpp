@@ -1,7 +1,7 @@
-#include "controller.h"
+#include "../include/controller.h"
 
-#include "model.h"
-#include "view.h"
+#include "../include/model.h"
+#include "../include/view.h"
 
 #include <iostream>
 #include <string.h>
@@ -46,12 +46,16 @@ void Controller::GetInput(){
         m_view.Render(GAME);
         switch(m_model.CheckGame()){
             case WON: 
+                    cout << "WON \n"; 
                     break;
             case DRAWN: 
+                    cout << "DRAWN \n";
                     break;
             case RUNNING:
+                    cout << "RUNNING \n";
                     break; 
             default :
+                    cout << "default \n";
         }
     }else if(input == 'H'){
         m_view.Render(HELP);

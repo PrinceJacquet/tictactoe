@@ -12,7 +12,6 @@ typedef enum GAME_STATUS
     DRAWN = 3
 }GAME_STATUS;
 
-
 typedef union BOARD
 {
     char  board_3x3[3][3];
